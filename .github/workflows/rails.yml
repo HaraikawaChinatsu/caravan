@@ -2,9 +2,15 @@ name: Rails CI/CD
 
 on:
   push:
+<<<<<<< HEAD
     branches: [master]
   pull_request:
     branches: [master]
+=======
+    branches: [develop]
+  pull_request:
+    branches: [develop]
+>>>>>>> bb783c3bb4d164bbabb4a2ad48466c3787dc7bfd
 
 jobs:
   build:
@@ -19,7 +25,11 @@ jobs:
       run: |
         echo "$PRIVATE_KEY" > private_key && chmod 600 private_key
         ssh -o StrictHostKeyChecking=no -i private_key ${USER_NAME}@${HOST_NAME} 'cd K-Studio &&
+<<<<<<< HEAD
         git pull origin master &&
+=======
+        git pull origin develop &&
+>>>>>>> bb783c3bb4d164bbabb4a2ad48466c3787dc7bfd
         ~/.rbenv/shims/bundle install &&
         ~/.rbenv/shims/bundle exec rails assets:precompile RAILS_ENV=production &&
         ~/.rbenv/shims/bundle exec rails db:migrate RAILS_ENV=production &&

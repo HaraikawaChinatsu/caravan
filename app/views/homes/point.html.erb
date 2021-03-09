@@ -21,38 +21,41 @@
 							<header class="major">
 								<h1>特徴</h1>
 							</header>
-							<div class="content">
-								<p>HOGEHOGE<br />
-								HOGEHOGEHOGE</p>
-							</div>
 						</div>
 					</section>
 
 				<!-- Main -->
 					<div id="main">
+							<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
 
-						<!-- One -->
-							<section id="one">
-								<div class="inner">
-								  <div class="flex" style = color:black>
-								   <div class="box">
-								    <p>あああああああ</p>
-								   </div>
-                   <div class="box">
-								    <p>いいいいいいいい</p>
-								   </div>
-                   <div class="box">
-								    <p>ううううううううう</p>
-								   </div>
-                   <div class="box">
-								    <p>えええええええええ</p>
-								   </div>
-								  </div>
-								 </div>
-								</div>
-							</section>
+    <!-- CSSファイルの読み込み -->
+    <link rel="stylesheet" href="point.scss" />
+  </head>
 
-							</section>
+  <!-- header -->
+  <body>
+    <main>
+      <div class="step-box">
+        <div><%= image_tag 'onlineCoaching.png' ,class: "step-img" %></div>
+        <h3 class="title">オンラインで</br>技術が身に付く<br/></h3>
+      </div>
+
+      <div class="step-box">
+        <div><%= image_tag 'coachers.png' ,class: "step-img" %></div>
+        <h3 class="title">経歴・知識豊富な</br>コーチがアドバイス</h3>
+      </div>
+
+      <div class="step-box">
+        <div><%= image_tag 'anshin.png' ,class: "step-img" %></div>
+        <h3 class="title">経歴・業界最安</br>月額980円＋</br>初回2週間無料</h3>
+      </div>
+    </main>
+  </body>
+</html>
+
 
 					<span><%= link_to 'Back', top_path, class: "button next scrolly" %></span>
 
